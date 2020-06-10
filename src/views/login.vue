@@ -8,6 +8,8 @@
 </template>
 
 <script>
+// lien utilisé: https://www.thepolyglotdeveloper.com/2018/04/simple-user-login-vuejs-web-application/
+
     export default {
         name: 'Login',
         data() {
@@ -26,9 +28,11 @@
                         this.$router.replace({ name: "secure" });
                     } else {
                         console.log("The username and / or password is incorrect");
+                        alert ("ERREUR: Login/mot de passe incorrect");
                     }
                 } else {
                     console.log("A username and password must be present");
+                    alert ("ERREUR: Informations incomplètes");
                 }
             }
         }
