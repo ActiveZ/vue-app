@@ -2,7 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Bienvenue sur la page Vue.js d'Arnaud !"/>
-    <!-- <button>Login</button> -->
+    <button>Login</button>
   </div>
 </template>
 
