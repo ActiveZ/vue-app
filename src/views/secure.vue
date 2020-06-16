@@ -2,6 +2,7 @@
     <div id="secure">
         <h1>Zone protégée</h1>
         <p>Vous êtes dans une zone sécurisée !</p>
+        <button type="button" v-on:click="home()">Accueil</button>
     </div>
 </template>
 
@@ -10,8 +11,16 @@
         name: 'Secure',
         data() {
             return {};
+        },
+        methods: {
+            home() {
+                this.$emit("authenticated", false);
+                this.$router.replace({ name: "login" });
+            }
         }
     }
+
+
 </script>
 
 <style scoped>
