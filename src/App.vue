@@ -1,8 +1,8 @@
 <template>
     <div id="app">
         <div id="nav">
-             <router-link to="/">Home</router-link> | 
-             <router-link to="/login">Secure</router-link>
+             <router-link to="/">Accueil</router-link> | 
+             <router-link to="/login">Zone sécurisée</router-link>
         </div>
         <router-view @authenticated="setAuthenticated" />
     </div>
