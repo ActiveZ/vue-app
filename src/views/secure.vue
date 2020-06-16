@@ -2,7 +2,7 @@
     <div id="secure">
         <h1>Zone protégée</h1>
         <p>Vous êtes dans une zone sécurisée !</p>
-        <button type="button" v-on:click="home()">Accueil</button>
+        <button type="button" v-on:click="home()">Déconnexion</button>
     </div>
 </template>
 
