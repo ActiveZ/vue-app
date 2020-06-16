@@ -1,9 +1,7 @@
 <template>
     <div id="secure">
         <h1>Zone protégée</h1>
-        <p>
-            Vous êtes dans une zone sécurisée !
-        </p>
+        <p>Vous êtes dans une zone sécurisée !</p>
     </div>
 </template>
 

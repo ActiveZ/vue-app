@@ -37,14 +37,15 @@
 
 <style>
     body {
-        background-color: #F0F0F0;
+        /* background-color: #F0F0F0; */
+        background-color: rgb(70, 70, 70);
     }
     h1 {
         padding: 0;
         margin-top: 0;
     }
     #app {
-        width: 1024px;
+        /*width: 1024px;*/
         margin: auto;
     }
 </style>
