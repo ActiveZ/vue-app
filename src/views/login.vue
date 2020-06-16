@@ -4,6 +4,8 @@
         <p><input type="text" name="username" v-model="input.username" placeholder="Nom (admin)"></p>
         <p><input type="password" name="password" v-model="input.password" placeholder="mot de passe (admin)"></p>
         <button type="button" v-on:click="login()">Connexion</button>
+        <button @click="cancel()">Annuler</button>
+
     </div>
 </template>
 
@@ -33,6 +35,10 @@
                     console.log("A username and password must be present");
                     alert ("ERREUR: Informations incomplètes");
                 }
+            },
+
+            cancel() {
+                this.$router.push ({ name: "Home"});
             }
         }
     }

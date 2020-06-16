@@ -15,7 +15,7 @@
         methods: {
             home() {
                 this.$emit("authenticated", false);
-                this.$router.replace({ name: "login" });
+                this.$router.replace({ name: "Home" });
             }
         }
     }
