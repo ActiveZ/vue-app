@@ -16,7 +16,7 @@
 
 <style scoped>
     #secure {
-        background-color: #FFFFFF;
+        background-color: #ccffaa;
         border: 1px solid #CCCCCC;
         padding: 20px;
         margin-top: 10px;
