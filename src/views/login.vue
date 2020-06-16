@@ -1,9 +1,9 @@
 <template>
     <div id="login">
-        <h1>PAGE DE LOGIN</h1>
+        <h1>PAGE DE CONNEXION</h1>
         <p><input type="text" name="username" v-model="input.username" placeholder="Nom (admin)"></p>
         <p><input type="password" name="password" v-model="input.password" placeholder="mot de passe (admin)"></p>
-        <button type="button" v-on:click="login()">Login</button>
+        <button type="button" v-on:click="login()">Connexion</button>
     </div>
 </template>
 
