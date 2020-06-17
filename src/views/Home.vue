@@ -38,7 +38,6 @@ data(){
     },
     deconnexion() {
       this.$root.connected = false;
-      //this.$router.push ({})
     }
   }
 } 

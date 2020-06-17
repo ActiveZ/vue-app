@@ -8,7 +8,6 @@ Vue.config.productionTip = false
 new Vue({
   router,
   data: {
-    // nomTest: "arnaud",
     connected: false,
     user: ""
   },

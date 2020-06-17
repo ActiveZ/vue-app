@@ -3,7 +3,6 @@
         <h1>Zone protégée</h1>
         <p>Vous êtes dans une zone sécurisée !</p>
         <superBouton :param="param" @customClick="deconnexion" />
-        <!-- <button type="button" v-on:click="home()">Déconnexion</button> -->
     </div>
 </template>
 
@@ -26,9 +25,6 @@ import superBouton from '@/components/superBouton.vue'
         },
 
         mounted() {
-            // if(!this.$parent.authenticated) {
-            //     this.$router.replace({ name: "Home" });
-            // }
             if(!this.$root.connected) {
                 this.$router.replace({ name: "Home" });
             }
@@ -36,13 +32,13 @@ import superBouton from '@/components/superBouton.vue'
 
         methods: {
             deconnexion() {
-                // this.$emit("authenticated", false);
                 this.$root.connected = false;
                 this.$router.replace({ name: "Home" });
             }
         }
     }
 </script>
+
 
 <style scoped>
     #secure {

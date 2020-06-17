@@ -12,11 +12,9 @@
 
 <script>
     export default {
-        //name: 'App',
         data() {
             return {
                 connected: false,
-                //authenticated: false,
                 idValide: {
                     username: "admin",
                     password: "admin"
@@ -24,21 +22,11 @@
             }
         },
         mounted() {
-            // if(!this.authenticated) {
-            //     this.$router.replace({ name: "Home" });
-            // }
             if(this.$root.connected) {
                 this.$router.replace({ name: "Secure" });
             }
         },
-        methods: {
-            // setAuthenticated(status) {
-            //     this.authenticated = status;
-            // },
-            // logout() {
-            //     this.authenticated = false;
-            // }
-        }
+        methods: {}
     }
 </script>
 
