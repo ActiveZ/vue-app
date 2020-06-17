@@ -24,7 +24,7 @@
         methods: {
             login() {
                 if(this.input.username != "" && this.input.password != "") {
-                    if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
+                    if(this.input.username == this.$parent.idValide.username && this.input.password == this.$parent.idValide.password) {
                         this.$emit("authenticated", true);
                         this.$router.replace({ name: "secure" });
                     } else {
@@ -38,6 +38,7 @@
             },
 
             cancel() {
+                this.$emit("authenticated", false);
                 this.$router.push ({ name: "Home"});
             }
         }

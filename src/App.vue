@@ -10,20 +10,20 @@
 
 <script>
     export default {
-        name: 'App',
+        //name: 'App',
         data() {
             return {
                 authenticated: false,
-                mockAccount: {
+                idValide: {
                     username: "admin",
                     password: "admin"
                 }
             }
         },
         mounted() {
-            if(!this.authenticated) {
-                this.$router.replace({ name: "Home" });
-            }
+            // if(!this.authenticated) {
+            //     this.$router.replace({ name: "Home" });
+            // }
         },
         methods: {
             setAuthenticated(status) {
