@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <div class="topnav">
+        <div id="topnav">
             <router-link to="/" class="active">Accueil</router-link> 
             <router-link to="/about">A propos</router-link> 
             <router-link to="/login">Zone sécurisée</router-link>
@@ -46,12 +46,12 @@
     }
 
 /***************** barre de navigation *********************/
-.topnav {
+#topnav {
   overflow: hidden;
   background-color: #333;
 }
 
-.topnav a {
+#topnav a {
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -60,12 +60,13 @@
   font-size: 17px;
 }
 
-.topnav a:hover {
+#topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
-.topnav a.active {
+#topnav a.active {
+  /* background-color: red; */
   background-color: #4CAF50;
   color: white;
 }

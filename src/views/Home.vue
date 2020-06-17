@@ -2,7 +2,7 @@
   <div id="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Bienvenue sur la page Vue.js d'Arnaud !"/>
-    <p v-if="this.$root.connected">Bonjour {{ this.$root.user }}, vous êtes connecté</p>
+    <p id="msg" v-if="this.$root.connected">Bonjour {{ this.$root.user }}, vous êtes connecté</p>
     <superBouton v-if="!this.$root.connected" :param="param1" @customClick="connexion" />
     <superBouton v-if="this.$root.connected" :param="param2" @customClick="deconnexion" />
   </div>
@@ -53,5 +53,9 @@ data(){
         margin: auto;
         margin-top: 200px;
         padding: 20px;
+    }
+
+    #msg {
+      color: red;
     }
 </style>
