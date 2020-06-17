@@ -24,24 +24,24 @@ import superBouton from '@/components/superBouton.vue'
                 }
             };
         },
+
         mounted() {
-            if(!this.$parent.authenticated) {
+            // if(!this.$parent.authenticated) {
+            //     this.$router.replace({ name: "Home" });
+            // }
+            if(!this.$root.connected) {
                 this.$router.replace({ name: "Home" });
             }
         },
+
         methods: {
-            // home() {
-            //     this.$emit("authenticated", false);
-            //     this.$router.replace({ name: "Home" });
-            // }
             deconnexion() {
-                this.$emit("authenticated", false);
+                // this.$emit("authenticated", false);
+                this.$root.connected = false;
                 this.$router.replace({ name: "Home" });
             }
         }
     }
-
-
 </script>
 
 <style scoped>

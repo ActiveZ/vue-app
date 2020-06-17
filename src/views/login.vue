@@ -1,5 +1,6 @@
 <template>
     <div id="login">
+
         <h1>PAGE DE CONNEXION</h1>
         <p><input type="text" name="username" v-model="input.username" placeholder="Nom (admin)"></p>
         <p><input type="password" name="password" v-model="input.password" placeholder="mot de passe (admin)"></p>
@@ -36,11 +37,20 @@ import superBouton from '@/components/superBouton.vue'
                 }
             }
         },
+        
+        mounted() {
+            if(this.$root.connected) {
+                this.$router.replace({ name: "secure" });
+            }
+        },
+
         methods: {
             login() {
                 if(this.input.username != "" && this.input.password != "") {
                     if(this.input.username == this.$parent.idValide.username && this.input.password == this.$parent.idValide.password) {
-                        this.$emit("authenticated", true);
+                        // this.$emit("authenticated", true);
+                        this.$root.connected = true;
+                        this.$root.user = this.input.username;
                         this.$router.replace({ name: "secure" });
                     } else {
                         console.log("The username and / or password is incorrect");
@@ -53,7 +63,8 @@ import superBouton from '@/components/superBouton.vue'
             },
 
             cancel() {
-                this.$emit("authenticated", false);
+                // this.$emit("authenticated", false);
+                // this.$root.connected = false;
                 this.$router.push ({ name: "Home"});
             }
         }

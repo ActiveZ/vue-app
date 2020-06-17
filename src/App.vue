@@ -5,7 +5,8 @@
              <router-link to="/about">About</router-link> | 
              <router-link to="/login">Zone sécurisée</router-link>
         </div>
-        <router-view @authenticated="setAuthenticated" />
+        <router-view/>
+        <!-- <router-view @authenticated="setAuthenticated" /> -->
     </div>
 </template>
 
@@ -14,7 +15,8 @@
         //name: 'App',
         data() {
             return {
-                authenticated: false,
+                connected: false,
+                //authenticated: false,
                 idValide: {
                     username: "admin",
                     password: "admin"
@@ -22,17 +24,20 @@
             }
         },
         mounted() {
-            if(!this.authenticated) {
-                this.$router.replace({ name: "Home" });
+            // if(!this.authenticated) {
+            //     this.$router.replace({ name: "Home" });
+            // }
+            if(this.$root.connected) {
+                this.$router.replace({ name: "Secure" });
             }
         },
         methods: {
-            setAuthenticated(status) {
-                this.authenticated = status;
-            },
-            logout() {
-                this.authenticated = false;
-            }
+            // setAuthenticated(status) {
+            //     this.authenticated = status;
+            // },
+            // logout() {
+            //     this.authenticated = false;
+            // }
         }
     }
 </script>

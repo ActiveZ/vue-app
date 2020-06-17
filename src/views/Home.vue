@@ -2,10 +2,9 @@
   <div id="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Bienvenue sur la page Vue.js d'Arnaud !"/>
-    <!-- <button @click="connexion()">Connexion</button> -->
-    <superBouton :param="param" @customClick="connexion" />
-    <!-- <superBouton :param="param" @customClick="test" @click="connexion"/> -->
-
+    <p v-if="this.$root.connected">Bonjour {{ this.$root.user }}, vous êtes connecté</p>
+    <superBouton v-if="!this.$root.connected" :param="param1" @customClick="connexion" />
+    <superBouton v-if="this.$root.connected" :param="param2" @customClick="deconnexion" />
   </div>
 </template>
 
@@ -23,24 +22,28 @@ export default {
 
 data(){
     return{
-      param : {
+      param1 : {
         nom :"connexion",
-        //couleur : "green"
+      },
+      param2 : {
+        nom :"déconnexion",
+        width: "220px"
       }
     }
   },
+
   methods: {
-    connexion(){
+    connexion() {
       this.$router.push ({name:'login'});
     },
-
-    test(param){
-      alert('ok ' + param.nom)
+    deconnexion() {
+      this.$root.connected = false;
+      //this.$router.push ({})
     }
   }
 } 
-
 </script>
+
 
 <style scoped>
     #home {
