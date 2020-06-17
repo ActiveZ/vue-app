@@ -41,21 +41,20 @@
         margin-top: 0;
     }
     #app {
-        /* width: 1024px; */
         margin: auto;
     }
 
 /***************** barre de navigation *********************/
 #topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #35495e;
 }
 
 #topnav a {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px 14px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -67,7 +66,7 @@
 
 #topnav a.active {
   /* background-color: red; */
-  background-color: #4CAF50;
+  background-color: #41b883;
   color: white;
 }
 
