@@ -3,17 +3,33 @@
         <h1>PAGE DE CONNEXION</h1>
         <p><input type="text" name="username" v-model="input.username" placeholder="Nom (admin)"></p>
         <p><input type="password" name="password" v-model="input.password" placeholder="mot de passe (admin)"></p>
-        <button type="button" v-on:click="login()">Connexion</button>
-        <button @click="cancel()">Annuler</button>
+        <div id ="superBt">
+            <superBouton :param="param1" @customClick="login" />
+            <superBouton :param="param2" @customClick="cancel" />
+        </div>
+        <!-- <button type="button" v-on:click="login()">Connexion</button> -->
+        <!-- <button @click="cancel()">Annuler</button> -->
     </div>
 </template>
 
 <script>
+import superBouton from '@/components/superBouton.vue'
 
     export default {
         name: 'Login',
+        components: {
+            superBouton
+        },
+
         data() {
             return {
+                param1: {
+                    nom: "connexion"
+                },
+                param2: {
+                    nom: "Annuler"
+                },
+
                 input: {
                     username: "",
                     password: ""
@@ -53,5 +69,10 @@
         margin: auto;
         margin-top: 200px;
         padding: 20px;
+    }
+
+    #superBt {
+        display: flex;
+        justify-content: space-around;
     }
 </style>
