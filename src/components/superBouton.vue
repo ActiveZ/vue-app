@@ -1,8 +1,6 @@
 <template>
-  <!-- <div class="superBouton"> -->
 <div>
-<button class="superBouton" @click="customClick"> {{ param.nom }} </button>  
-<!-- <button :style="{'backgroundColor' : param.couleur}" @click="updatecouleur" > {{ param.nom }} </button> -->
+  <button class="superBouton" :style="{'width' : param.width}" @click="customClick"> {{ param.nom }} </button>  
 </div>
 </template>
 
@@ -27,7 +25,7 @@ export default {
 .superBouton {
 	background: linear-gradient(to right, gold, darkorange);
 	color: white;
-	--width: 150px;
+	--width: 160px;
 	--height: calc(var(--width) / 3);
 	width: var(--width);
 	height: var(--height);

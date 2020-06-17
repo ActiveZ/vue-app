@@ -2,16 +2,27 @@
     <div id="secure">
         <h1>Zone protégée</h1>
         <p>Vous êtes dans une zone sécurisée !</p>
-        <button type="button" v-on:click="home()">Déconnexion</button>
-        <superBouton nom="Vert" couleur="red" />
+        <superBouton :param="param" @customClick="deconnexion" />
+        <!-- <button type="button" v-on:click="home()">Déconnexion</button> -->
     </div>
 </template>
 
 <script>
+import superBouton from '@/components/superBouton.vue'
+
     export default {
         name: 'Secure',
+        components: {
+            superBouton
+        },
+
         data() {
-            return {};
+            return {
+                param : {
+                    nom :"déconnexion",
+                    width: "220px"
+                }
+            };
         },
         mounted() {
             if(!this.$parent.authenticated) {
@@ -19,7 +30,11 @@
             }
         },
         methods: {
-            home() {
+            // home() {
+            //     this.$emit("authenticated", false);
+            //     this.$router.replace({ name: "Home" });
+            // }
+            deconnexion() {
                 this.$emit("authenticated", false);
                 this.$router.replace({ name: "Home" });
             }
