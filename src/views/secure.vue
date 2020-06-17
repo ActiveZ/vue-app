@@ -45,6 +45,6 @@ import superBouton from '@/components/superBouton.vue'
         background-color: #ccffaa;
         border: 1px solid #CCCCCC;
         padding: 20px;
-        margin-top: 10px;
+        margin-top: 20px;
     }
 </style>

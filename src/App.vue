@@ -1,9 +1,10 @@
 <template>
+
     <div id="app">
         <div id="topnav">
             <router-link to="/" class="active">Accueil</router-link> 
             <router-link to="/about">A propos</router-link> 
-            <router-link to="/login">Zone sécurisée</router-link>
+            <router-link to="/login">Zone protégée</router-link>
         </div>
         <router-view/>
         <!-- <router-view @authenticated="setAuthenticated" /> -->
@@ -32,7 +33,6 @@
 
 <style>
     body {
-        /* background-color: #F0F0F0; */
         background-color: rgb(221, 221, 221);
         margin: auto;
     }
