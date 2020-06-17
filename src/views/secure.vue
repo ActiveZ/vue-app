@@ -3,6 +3,7 @@
         <h1>Zone protégée</h1>
         <p>Vous êtes dans une zone sécurisée !</p>
         <button type="button" v-on:click="home()">Déconnexion</button>
+        <superBouton nom="Vert" couleur="red" />
     </div>
 </template>
 
@@ -13,7 +14,7 @@
             return {};
         },
         mounted() {
-            if(!this.$root.authenticated) {
+            if(!this.$parent.authenticated) {
                 this.$router.replace({ name: "Home" });
             }
         },

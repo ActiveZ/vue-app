@@ -5,7 +5,6 @@
         <p><input type="password" name="password" v-model="input.password" placeholder="mot de passe (admin)"></p>
         <button type="button" v-on:click="login()">Connexion</button>
         <button @click="cancel()">Annuler</button>
-
     </div>
 </template>
 

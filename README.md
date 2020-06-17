@@ -4,6 +4,7 @@ Deploy: https://activez.github.io/vue-app
 
 Pseudo: ActiveZ
 
+cours: https://github.com/dv-formateur/cnam-web-mobile-2020
 -------------------------------------------------------------------------------------
 
 L'application comporte un espace protégé fonctionnel

@@ -2,6 +2,7 @@
     <div id="app">
         <div id="nav">
              <router-link to="/">Accueil</router-link> | 
+             <router-link to="/about">About</router-link> | 
              <router-link to="/login">Zone sécurisée</router-link>
         </div>
         <router-view @authenticated="setAuthenticated" />
@@ -21,9 +22,9 @@
             }
         },
         mounted() {
-            // if(!this.authenticated) {
-            //     this.$router.replace({ name: "Home" });
-            // }
+            if(!this.authenticated) {
+                this.$router.replace({ name: "Home" });
+            }
         },
         methods: {
             setAuthenticated(status) {
