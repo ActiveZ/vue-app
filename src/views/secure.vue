@@ -42,7 +42,7 @@ import superBouton from '@/components/superBouton.vue'
 
 <style scoped>
     #secure {
-        background-color: #ccffaa;
+        background-color: #41b883;
         border: 1px solid #CCCCCC;
         padding: 20px;
         margin-top: 20px;

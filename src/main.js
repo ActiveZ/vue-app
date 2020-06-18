@@ -9,7 +9,7 @@ new Vue({
   router,
   data: {
     connected: false,
-    user: ""
+    user: "",
   },
   render: h => h(App)
 }).$mount('#app')

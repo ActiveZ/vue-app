@@ -4,7 +4,7 @@
         <div id="topnav">
             <router-link to="/" class="active">Accueil</router-link> 
             <router-link to="/about">A propos</router-link> 
-            <router-link to="/login">Zone protégée</router-link>
+            <router-link to="/login" :style="{'color': colorConnect}">{{ isConnect }}</router-link>
         </div>
         <router-view/>
         <!-- <router-view @authenticated="setAuthenticated" /> -->
@@ -25,6 +25,16 @@
         mounted() {
             if(this.$root.connected) {
                 this.$router.replace({ name: "Secure" });
+            }
+        },
+        computed: {
+            isConnect: function() {  
+                if (this.$root.connected) return "Connecté";
+                else return "Déconnecté";
+            },
+            colorConnect: function() {
+                if (this.$root.connected) return "#41b883";
+                else return "red";
             }
         },
         methods: {}
