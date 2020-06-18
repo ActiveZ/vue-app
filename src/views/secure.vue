@@ -44,7 +44,7 @@ import superBouton from '@/components/superBouton.vue'
     #secure {
         background-color: #41b883;
         border: 1px solid #CCCCCC;
-        padding: 20px;
-        margin-top: 20px;
+        padding: 40px;
+        /* margin-top: 20px; */
     }
 </style>
