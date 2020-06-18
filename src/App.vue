@@ -16,7 +16,6 @@
         data() {
             return {
                 connected: false,
-                myClass: false,
                 idValide: {
                     username: "admin",
                     password: "admin"
@@ -32,11 +31,6 @@
             isConnect: function() {  // pour le libellé de l'onglet menu connecté
                 if (this.$root.connected) return "Connecté";
                 else return "Déconnecté";
-            },
-
-            isActive: function() {// pour couleur de l'onglet actif
-                if (this.$root.connected) return "active";
-                else return "";
             },
 
             colorConnect: function() { //pour la couleur du texte de l'onglet du menu connecté
