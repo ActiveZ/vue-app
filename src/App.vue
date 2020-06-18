@@ -2,7 +2,7 @@
     <div id="app">
         <div id="topnav">
             <router-link to="/">Accueil</router-link>
-            <router-link to="/carte">Carte</router-link> 
+            <!-- <router-link to="/carte">Carte</router-link>  -->
             <router-link to="/about">A propos</router-link>
             <router-link to="/login" :style="{'color': colorConnect}">{{ isConnect }}</router-link>
         </div>
