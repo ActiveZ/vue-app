@@ -77,7 +77,7 @@
 }
 
 .router-link-exact-active {
-    /* couleur de l'onglet du chemin actif*/
+    /* couleur de l'onglet du chemin actif */
     background-color: #41b883;
     transition: all 0.25s;
 }
