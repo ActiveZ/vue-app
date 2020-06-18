@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import LoginComponent from "../views/login.vue"
 import SecureComponent from "../views/secure.vue"
 
+
 Vue.use(VueRouter)
 
   const routes = [
@@ -21,6 +22,12 @@ Vue.use(VueRouter)
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
+
+  {
+  path: '/carte',
+  name: 'Carte',
+  component: () => import('../views/carte.vue')
+},
 
 /*   {
     path: '/',

@@ -2,12 +2,12 @@
 
     <div id="app">
         <div id="topnav">
-            <router-link to="/" class="active">Accueil</router-link> 
-            <router-link to="/about">A propos</router-link> 
+            <router-link to="/">Accueil</router-link>
+            <router-link to="/carte">Carte</router-link> 
+            <router-link to="/about">A propos</router-link>
             <router-link to="/login" :style="{'color': colorConnect}">{{ isConnect }}</router-link>
         </div>
         <router-view/>
-        <!-- <router-view @authenticated="setAuthenticated" /> -->
     </div>
 </template>
 
@@ -16,6 +16,7 @@
         data() {
             return {
                 connected: false,
+                myClass: false,
                 idValide: {
                     username: "admin",
                     password: "admin"
@@ -28,11 +29,17 @@
             }
         },
         computed: {
-            isConnect: function() {  
+            isConnect: function() {  // pour le libellé de l'onglet menu connecté
                 if (this.$root.connected) return "Connecté";
                 else return "Déconnecté";
             },
-            colorConnect: function() {
+
+            isActive: function() {// pour couleur de l'onglet actif
+                if (this.$root.connected) return "active";
+                else return "";
+            },
+
+            colorConnect: function() { //pour la couleur du texte de l'onglet du menu connecté
                 if (this.$root.connected) return "#41b883";
                 else return "red";
             }
@@ -54,6 +61,8 @@
         margin: auto;
     }
 
+
+
 /***************** barre de navigation *********************/
 #topnav {
   overflow: hidden;
@@ -74,10 +83,11 @@
   color: black;
 }
 
-#topnav a.active {
-  /* background-color: red; */
-  background-color: #41b883;
-  color: white;
+.router-link-exact-active {
+    /* couleur de l'onglet du chemin actif*/
+    background-color: #41b883;
+    transition: all 0.25s;
 }
+
 
 </style>
