@@ -4,8 +4,7 @@ module.exports = {
       ? '/vue-app/'
       : '/',
     pwa: {
-      themeColor: 'red',
-      // themeColor: '#000',
+      themeColor: '#000',
     }
   }
   
