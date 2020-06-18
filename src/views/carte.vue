@@ -3,7 +3,7 @@
   <div style="height: 500px; width: 100%">
     <div style="height: 200px overflow: auto;">
       <p>Localisation actuelle: {{ withPopup.lat }}, {{ withPopup.lng }}</p>
-      <p>Center is at {{ currentCenter }} and the zoom is: {{ currentZoom }}</p>
+      <p>Centré sur {{ currentCenter }} et zoom à: {{ currentZoom }}</p>
       <button @click="showLongText">
         Toggle long popup
       </button>
