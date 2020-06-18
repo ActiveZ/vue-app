@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-app/css/about.1de68fbe.css"
   },
   {
-    "revision": "13f57006b8d2bfccc169",
+    "revision": "99ed855215090004e3a5",
     "url": "/vue-app/css/app.e5590300.css"
   },
   {
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-app/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "c4b121ab92e27da7345229479d23a564",
+    "revision": "ae7094d7872803ed64c6be9ccf87a60e",
     "url": "/vue-app/index.html"
   },
   {
@@ -20,12 +20,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-app/js/about.50edfd18.js"
   },
   {
-    "revision": "13f57006b8d2bfccc169",
-    "url": "/vue-app/js/app.14c950df.js"
+    "revision": "99ed855215090004e3a5",
+    "url": "/vue-app/js/app.87805ce7.js"
   },
   {
-    "revision": "6595375025420290f11d",
-    "url": "/vue-app/js/chunk-53136a68.f8c999f0.js"
+    "revision": "0cb7d7d9fc03e5c94cc5",
+    "url": "/vue-app/js/chunk-53136a68.c7f4129a.js"
   },
   {
     "revision": "0a591de88b1b539676c5",

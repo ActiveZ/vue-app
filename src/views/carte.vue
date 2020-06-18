@@ -1,7 +1,7 @@
 <template>
-
-  <div style="height: 500px; width: 100%">
-    <div style="height: 200px overflow: auto;">
+<div>
+  <div >
+    <div >
       <p>Localisation actuelle: {{ withPopup.lat }}, {{ withPopup.lng }}</p>
       <p>Centré sur {{ currentCenter }} et zoom à: {{ currentZoom }}</p>
       <button @click="showLongText">
@@ -16,7 +16,7 @@
       :zoom="zoom"
       :center="center"
       :options="mapOptions"
-      style="height: 80%"
+      style="height: 30%"
       @update:center="centerUpdate"
       @update:zoom="zoomUpdate"
     >
@@ -49,6 +49,7 @@
         </l-tooltip>
       </l-marker>
     </l-map>
+  </div>
   </div>
 </template>
 
